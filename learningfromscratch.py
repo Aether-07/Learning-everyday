@@ -144,7 +144,7 @@ for i in string2:
         n = n+1
 print(n)
 
-string3 = "i love boob"
+string3 = "i love tenet"
 string4 = ""
 n = len(string3)
 for i in string3:       #take i = 0, for 0 in string3:(w) ; take i = 1, for 1 in string3:(h)
@@ -159,7 +159,7 @@ for c in wordd:
         y = y+1
 print(y)
 
-worddd = "ass"
+worddd = "jump"
 copy_wordd = ""
 for c in worddd:
     copy_wordd = c+copy_wordd
