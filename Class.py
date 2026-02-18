@@ -59,4 +59,34 @@ student1 = Students()
 print(student1)  # We are getting the memory address when doing this
 student1.study()
 
+#BANK ACC
+class BankAcc:
+    """
+    BANK ACCOUNT APPLICATION MANAGEMENT
+    """
+    pass
 
+user1 = BankAcc()
+
+print(BankAcc.__doc__)
+
+user1.holdername = input("Enter Account holder name: ")
+user1.accnum = int(input("Enter Account Number: "))
+user1.balance = int(input("Enter balance: $"))
+
+print("What would you like to do?: ")
+print("A).deposit amount B).withdraw amount C).display acc details")
+i = input("Enter A,B,C to choose the option: ")
+if i == "A":
+    x = int(input("Deposit amount: "))
+    user1.balance = user1.balance + x
+    print(f"Remaining balance: ${user1.balance}")
+elif i == "B":
+    y = int(input("Withdraw amount: "))
+    user1.balance = user1.balance - y
+    print(f"Remaining balance: ${user1.balance}")
+elif i == "C":
+    print("=======================================")
+    print(user1.__dict__)
+else:
+    print("enter valid input")
