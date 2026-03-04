@@ -53,3 +53,33 @@ int main(){
     return 0;
 }
 
+//constructors 
+#include<iostream>
+using namespace std;
+class Student{
+    
+    private:
+        int marks;
+        int roll;
+    
+    public:
+        
+        Student(int m, int r){
+            marks =m;
+            roll = r;
+        }
+    
+    void display(){
+        cout << "Roll: " << roll << endl;
+        cout << "Marks: "<< marks << endl;
+        
+    }
+};
+
+int main(){
+    Student s1(50,98);
+    
+    s1.display();
+    return 0;
+}
+
