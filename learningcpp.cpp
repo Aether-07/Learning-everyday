@@ -286,4 +286,60 @@ int main(){
     c3.display();
 }
 
+//inheritance 
+#include <iostream>
+using namespace std;
+
+class Person{
+protected:
+    string name;
+public:
+    void setname(string n){
+        name = n;
+    }
+};
+
+class student : virtual public Person{
+protected: 
+    int rollno;
+public:
+    void setrollno(int r){
+        rollno = r;
+    }
+};
+
+class employee : virtual public Person{
+protected:
+    int empid;
+public:
+    void setempid(int e){
+        empid = e;
+    }
+};
+
+class teachingassistant : public student , public employee{
+private: 
+    string subject;
+public:
+    void setsub(string s){
+        subject =s;
+    }
+    void display(){
+        cout<<"Name: "<<name<<endl;
+        cout<<"Roll no: "<< rollno<<endl;
+        cout<<"Employee ID: "<<empid<<endl;
+        cout<<"Subject: "<< subject<<endl;
+    }
+};
+
+int main(){
+    teachingassistant t1;
+    t1.setname("anirudh");
+    t1.setrollno(101);
+    t1.setempid(501);
+    t1.setsub("oodp");
+    t1.display();
+    return 0;
+}
+
 
